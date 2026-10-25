@@ -10,6 +10,7 @@ import { swaggerSpec } from './config/swagger.js';
 import authRoutes from './modules/auth/auth.routes.js';
 import usersRoutes from './modules/users/users.routes.js';
 import mediaRoutes from './modules/media/media.routes.js';
+import tasksRouters from './modules/tasks/task.routes.js';
 
 const app = express();
 
@@ -36,6 +37,7 @@ if (env.NODE_ENV !== 'test') {
 
 app.use('/api/users', usersRoutes);
 app.use('/api/media', mediaRoutes);
+app.use('/api/tasks', tasksRouters);
 
 app.use(errorHandler);
 
